@@ -11,13 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('form', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('nome');
+            $table->integer('idade');
+            $table->timestamp('telefone')->nullable();
+            $table->string('ano_escolar');
+            $table->longText('sobre_lideranca');
+            $table->string('ministerio_exerce');
+            $table->string('ministerio_idenifica')->nullable();
+            $table->string('oportunidade_culto');
+            $table->string('oportunidade_descrita')->nullable();
+            $table->string('participacao_programacoes');
+            $table->string('segue_redes_sociais');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('form');
     }
 };
