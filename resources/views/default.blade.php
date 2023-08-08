@@ -15,7 +15,7 @@
             $('.horario').inputmask('99:99', { 'placeholder': 'HH:MM' });
             $('.cnpj').inputmask('99.999.999/9999-99');
             $('.cep').inputmask('99999-999');
-            $('.telefone').inputmask('(99) 9999-9999');
+            $('.telefone').inputmask('(99) 99999-9999');
             $('.data').inputmask('99/99/9999');
             $('.valor').inputmask('R$ 999.999,99');
         });
