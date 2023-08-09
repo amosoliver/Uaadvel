@@ -1,6 +1,6 @@
 @extends('default')
 @section('main')
-    <div class="container border mt-5 ">
+    <div class="container border mt-5 mb-3 ">
         <div class="box mt-2">
             <div class="box-header">
                 <div class="box-title">
@@ -41,48 +41,48 @@
                 </div>
 
             </div>
-            <div class="box">
-                <div class="box-header">
-                    <div class="box-title">
-                        <h3>QUEREMOS TE CONHECER MAIS UM POUQUINHO</h3>
+            <div class="container border mt-3 mb-3">
+                <div class="box">
+                    <div class="box-header">
+                        <div class="box-title">
+                            <h3>Queremos te conhecer mais um pouquinho</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="box-body">
-
-                    <div class="form-group">
-                        {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}
-                        <br>
-                        {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                        {{ Form::text('nome', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                        {{ Form::text('nome', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
-                        <br>
-                        {{ Form::text('profissao', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                        {{ Form::text('nome', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                        {{ Form::text('nome', null, ['class' => 'form-control']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                        {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                    <div class="box-body">
+                        <div class="form-group">
+                            {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <br>
+                            {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <br>
+                            {{ Form::text('profissao', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="box-footer mb-2 text-end">
         <br>
