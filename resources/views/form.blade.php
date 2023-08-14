@@ -4,7 +4,7 @@
         <div class="box mt-2">
             <div class="box-header">
                 <div class="box-title">
-                    <h1>Formulario</h1>
+                    <h1>Formulário Uaadvel</h1>
                 </div>
                 <br>
             </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('idade', 'Selecione sua idade:') }}
-                    {{ Form::select('idade',['Selecione a idade', $idade], null, ['class' => 'form-control', 'id' => 'setor']) }}
+                    {{ Form::select('idade',['Selecione a idade', $idade], null, ['class' => 'form-control', 'id' => 'idade']) }}
                 </div>
                 <div class="form-group">
                     {{ Form::label('setor', 'Setor', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
@@ -37,26 +37,26 @@
                 </div>
                 <div class="form-group">
                     {{ Form::label('ano_escolar', 'Ano escolar', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                    {{ Form::select('ano_escolar',['Selecione um ano', $anoEscolar], null, ['class' => 'form-control', 'id' => 'setor']) }}
+                    {{ Form::select('ano_escolar',['Selecione um ano', $anoEscolar], null, ['class' => 'form-control', 'id' => 'ano']) }}
                 </div>
 
             </div>
             <div class="container border mt-3 mb-3">
                 <div class="box">
                     <div class="box-header">
-                        <div class="box-title">
+                        <div class="box-title mt-2">
                             <h3>Queremos te conhecer mais um pouquinho</h3>
                         </div>
                     </div>
                     <div class="box-body">
                         <div class="form-group">
-                            {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}
-                            <br>
+                            {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}<br>
                             {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
                         </div>
                         <div class="form-group">
-                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                            {{ Form::label('nome', 'Qual ministério você exerce na igreja?
+                            (opções: louvor, professor da EBD, mídia, regente, pregador, outros...)', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::select('ministerio',['Selecione um ministério', $ministerio], null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
@@ -83,11 +83,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="box-footer mb-2 text-end">
-        <br>
-        <button type="submit" class="btn btn-primary btn-submit ">ADICIONAR</button>
-    </div>
-    {{ Form::close() }}
+        <div class="box-footer mb-2 text-end">
+            <br>
+            <button type="submit" class="btn btn-primary btn-submit ">ADICIONAR</button>
+        </div>
+        {{ Form::close() }}
     </div>
 @endsection
