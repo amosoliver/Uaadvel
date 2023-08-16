@@ -36,4 +36,23 @@ class SelectController extends Controller
 
         return $anoEscolar;
     }
+    public function ministerio()
+    {
+        $ministerio = [
+            'Louvor',
+            'Midia',
+            'Pregação',
+        ];
+
+        return $ministerio;
+    }
+    public function oportunidade()
+    {
+        $oportunidade = [
+            'SIM',
+            'NÃO'
+        ];
+
+        return $oportunidade;
+    }
 }

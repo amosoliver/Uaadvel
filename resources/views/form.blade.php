@@ -54,22 +54,16 @@
                             {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
                         </div>
                         <div class="form-group">
-                            {{ Form::label('nome', 'Qual ministério você exerce na igreja?
-                            (opções: louvor, professor da EBD, mídia, regente, pregador, outros...)', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::label('nome', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
                             {{ Form::select('ministerio',['Selecione um ministério', $ministerio], null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                         </div>
                         <div class="form-group">
-                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
-                        </div>
-                        <div class="form-group">
-                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
-                            <br>
+                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
                             {{ Form::text('profissao', null, ['class' => 'form-control']) }}
                         </div>
                         <div class="form-group">
-                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                            {{ Form::label('nome', 'Você gostaria de ter oportunidade nos cultos da UAADVEL? Caso a resposta for sim, descreva á baixo o que seria:', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+                            {{ Form::select('oportunidade',['Selecione', $oportunidade], null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>

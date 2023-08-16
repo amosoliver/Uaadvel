@@ -18,6 +18,8 @@ class FormController extends Controller
     {
         $v['setor'] = $this->selectController->setor();
         $v['idade'] = $this->selectController->idade();
+        $v['oportunidade'] = $this->selectController->oportunidade();
+        $v['ministerio'] = $this->selectController->ministerio();
         $v['anoEscolar'] = $this->selectController->anoEscolar();
         return response()->view('form', $v);
     }
