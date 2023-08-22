@@ -21,6 +21,10 @@ class FormController extends Controller
         $v['oportunidade'] = $this->selectController->oportunidade();
         $v['ministerio'] = $this->selectController->ministerio();
         $v['anoEscolar'] = $this->selectController->anoEscolar();
+        $v['redes'] = $this->selectController->redes();
+        $v['programacao'] = $this->selectController->programacao();
+
+
         return response()->view('form', $v);
     }
     public function store() {

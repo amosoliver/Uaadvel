@@ -1,46 +1,59 @@
 @extends('default')
 @section('main')
-    <div class="container border mt-5 mb-3 ">
-        <div class="box mt-2">
-            <div class="box-header">
-                <div class="box-title">
-                    <h1>Formulário Uaadvel</h1>
-                </div>
-                <br>
+<div class="container border mt-5 mb-3">
+    <div class="box mt-2">
+        <div class="box-header">
+            <div class="box-title">
+                <h1>Formulário Uaadvel</h1>
             </div>
         </div>
-        {{ Form::open([
-            'class' => 'form-horizontal',
-            'method' => 'POST',
-            'route' => 'form.store',
-            'enctype' => 'multipart/form-data',
-        ]) }}
-        <div class="box">
-            <div class="box-body">
+    </div>
 
-                <div class="form-group">
-                    {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
+    {{ Form::open([
+        'class' => 'form-horizontal',
+        'method' => 'POST',
+        'route' => 'form.store',
+        'enctype' => 'multipart/form-data',
+    ]) }}
+
+    <div class="box col-md-12">
+        <div class="box-body">
+
+            <div class="form-group">
+                {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                <div class="col-md-9 col-lg-10">
                     {{ Form::text('nome', null, ['class' => 'form-control']) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::label('idade', 'Selecione sua idade:') }}
-                    {{ Form::select('idade',['Selecione a idade', $idade], null, ['class' => 'form-control', 'id' => 'idade']) }}
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('idade', 'Selecione sua idade:', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                <div class="col-md-9 col-lg-10">
+                    {{ Form::select('idade', ['Selecione a idade'] + $idade, null, ['class' => 'form-control', 'id' => 'idade']) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::label('setor', 'Setor', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                    {{ Form::select('setor', ['Selecione um setor',$setor], null, ['class' => 'form-control', 'id' => 'setor']) }}
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('setor', 'Setor', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                <div class="col-md-9 col-lg-10">
+                    {{ Form::select('setor', ['Selecione um setor'] + $setor, null, ['class' => 'form-control', 'id' => 'setor']) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::label('numero', 'Número de celular', ['class' => 'control-label col-md-3 col-lg-2']) }}
-                    <br>
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('numero', 'Número de celular', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                <div class="col-md-9 col-lg-10">
                     {{ Form::text('numero', null, ['class' => 'form-control telefone']) }}
                 </div>
-                <div class="form-group">
-                    {{ Form::label('ano_escolar', 'Ano escolar', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                    {{ Form::select('ano_escolar',['Selecione um ano', $anoEscolar], null, ['class' => 'form-control', 'id' => 'ano']) }}
-                </div>
-
             </div>
+
+            <div class="form-group">
+                {{ Form::label('ano_escolar', 'Ano escolar', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                <div class="col-md-9 col-lg-10">
+                    {{ Form::select('ano_escolar', ['Selecione um ano'] + $anoEscolar, null, ['class' => 'form-control', 'id' => 'ano']) }}
+                </div>
+            </div>
+
             <div class="container border mt-3 mb-3">
                 <div class="box">
                     <div class="box-header">
@@ -49,38 +62,70 @@
                         </div>
                     </div>
                     <div class="box-body">
+
                         <div class="form-group">
-                            {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}<br>
-                            {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
+                            {{ Form::label('lideranca', 'O que você espera da liderança da UAADVEL ?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::text('lideranca', null, ['class' => 'form-control']) }}
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            {{ Form::label('nome', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::select('ministerio',['Selecione um ministério', $ministerio], null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            {{ Form::label('ministerio', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::select('ministerio', ['Selecione um ministério'] + $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('profissao', null, ['class' => 'form-control']) }}
+                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::text('profissao', null, ['class' => 'form-control']) }}
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            {{ Form::label('nome', 'Você gostaria de ter oportunidade nos cultos da UAADVEL? Caso a resposta for sim, descreva á baixo o que seria:', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::select('oportunidade',['Selecione', $oportunidade], null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            {{ Form::label('oportunidade', 'Você gostaria de ter oportunidade nos cultos da UAADVEL?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::select('oportunidade', ['Selecione'] + $oportunidade, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            </div>
                         </div>
+
+                        <div class="form-group" id="oportunidade-descrita" style="display: none;">
+                            {{ Form::label('oportunidade_descrita', 'Qual seria? (descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::text('oportunidade_descrita', null, ['class' => 'form-control']) }}
+                            </div>
+                        </div>
+
                         <div class="form-group">
-                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                        <div class="row">
+                            {{ Form::label('programacao', 'Você participou das últimas programações que tivemos?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            </div>
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::select('programacao', ['Selecione um evento'] + $programacao, null, ['class' => 'form-control', 'id' => 'programacao']) }}
+                            </div>
                         </div>
+
                         <div class="form-group">
-                            {{ Form::label('nome', 'Nome', ['class' => 'control-label col-md-3 col-lg-2']) }} <br>
-                            {{ Form::text('nome', null, ['class' => 'form-control']) }}
+                            {{ Form::label('redes', 'Você participou das últimas programações que tivemos?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::select('redes', ['Selecione'] + $redes, null, ['class' => 'form-control', 'id' => 'redes']) }}
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
+
         <div class="box-footer mb-2 text-end">
             <br>
-            <button type="submit" class="btn btn-primary btn-submit ">ADICIONAR</button>
+            {{ Form::button('ADICIONAR', ['type' => 'submit', 'class' => 'btn btn-primary btn-submit']) }}
         </div>
-        {{ Form::close() }}
     </div>
+
+    {{ Form::close() }}
+</div>
 @endsection

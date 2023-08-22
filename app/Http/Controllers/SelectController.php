@@ -55,4 +55,23 @@ class SelectController extends Controller
 
         return $oportunidade;
     }
+    public function redes()
+    {
+        $redes = [
+            'SIM',
+            'NÃO'
+        ];
+
+        return $redes;
+    }
+    public function programacao()
+    {
+        $programacao = [
+            'Conversa Teen',
+            'Vivos em Cristo',
+            'Consagra Uaadvel',
+        ];
+
+        return $programacao;
+    }
 }
