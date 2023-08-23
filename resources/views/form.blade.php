@@ -73,12 +73,12 @@
                         <div class="form-group">
                             {{ Form::label('ministerio', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
-                                {{ Form::select('ministerio', ['Selecione um ministério'] + $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                                {{ Form::select('ministerio', $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                                {{ Form::label('profissao', 'Em qual profissão você quer seguir? (Descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
                                 {{ Form::text('profissao', null, ['class' => 'form-control']) }}
                             </div>
@@ -87,12 +87,11 @@
                         <div class="form-group">
                             {{ Form::label('oportunidade', 'Você gostaria de ter oportunidade nos cultos da UAADVEL?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
-                                {{ Form::select('oportunidade', ['Selecione'] + $oportunidade, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            {{ Form::select('oportunidade', $oportunidade, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                             </div>
                         </div>
 
-                        <div class="form-group" id="oportunidade-descrita" style="display: none;">
-                            {{ Form::label('oportunidade_descrita', 'Qual seria? (descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            {{ Form::label('oportunidade_descrita', 'Se a resposta for SIM Qual seria? (descreva)', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
                                 {{ Form::text('oportunidade_descrita', null, ['class' => 'form-control']) }}
                             </div>
@@ -103,14 +102,14 @@
                             {{ Form::label('programacao', 'Você participou das últimas programações que tivemos?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             </div>
                             <div class="col-md-9 col-lg-10">
-                                {{ Form::select('programacao', ['Selecione um evento'] + $programacao, null, ['class' => 'form-control', 'id' => 'programacao']) }}
+                                {{ Form::select('programacao', $programacao, null, ['class' => 'form-control', 'id' => 'programacao']) }}
                             </div>
                         </div>
 
                         <div class="form-group">
-                            {{ Form::label('redes', 'Você participou das últimas programações que tivemos?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            {{ Form::label('redes', 'Você já nos segue nas redes sociais?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
-                                {{ Form::select('redes', ['Selecione'] + $redes, null, ['class' => 'form-control', 'id' => 'redes']) }}
+                                {{ Form::select('redes',$redes, null, ['class' => 'form-control c', 'id' => 'redes']) }}
                             </div>
                         </div>
 

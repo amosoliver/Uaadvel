@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->integer('idade');
+            $table->integer('setor');
             $table->timestamp('telefone')->nullable();
             $table->string('ano_escolar');
             $table->longText('sobre_lideranca');
