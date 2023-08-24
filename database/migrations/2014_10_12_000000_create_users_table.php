@@ -16,13 +16,14 @@ return new class extends Migration
             $table->string('nome');
             $table->integer('idade');
             $table->integer('setor');
-            $table->timestamp('telefone')->nullable();
+            $table->string('telefone')->nullable();
             $table->string('ano_escolar');
             $table->longText('sobre_lideranca');
             $table->string('ministerio_exerce');
-            $table->string('ministerio_idenifica')->nullable();
+            $table->string('ministerio_identifica')->nullable();
             $table->string('oportunidade_culto');
             $table->string('oportunidade_descrita')->nullable();
+            $table->string('profissao');
             $table->string('participacao_programacoes');
             $table->string('segue_redes_sociais');
             $table->timestamps();

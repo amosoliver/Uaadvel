@@ -28,22 +28,23 @@ class FormController extends Controller
 
         return response()->view('form', $v);
     }
-    public function store() {
+    public function store(Request $request) {
         try {
             $form = new Form();
 
             $form->nome= $request->input('nome');
-            $form->idade = $this->getBase64Image($request->file('idade'));
+            $form->idade = $request->input('idade');
             $form->setor = $request->input('setor');
             $form->telefone = $request->input('numero');
             $form->ano_escolar = $request->input('ano_escolar');
-            $form->sobre_lideranca = $request->input('liderança');
+            $form->sobre_lideranca = $request->input('lideranca');
             $form->ministerio_exerce = $request->input('ministerio_exerce');
-            $form->ministerio_indentifica = $request->input('ministerio_indentifica');
+            $form->ministerio_identifica = $request->input('ministerio_identifica');
             $form->oportunidade_culto = $request->input('oportunidade_culto');
-            $form->$oportunidade_descrita = request->input('oportunidade_descrita');
-            $form->participacao_programacoes = $request->input('participacap');
-            $form->segue_redes_sociais= $request->input('ds_form');
+            $form->oportunidade_descrita = $request->input('oportunidade_descrita');
+            $form->participacao_programacoes = $request->input('programacao');
+            $form->profissao = $request->input('profissao');
+            $form->segue_redes_sociais= $request->input('redes');
 
             if ($form->save()) {
                 return redirect()->route('form.create')->with('success', 'form registrada com sucesso!');

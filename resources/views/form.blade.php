@@ -71,9 +71,15 @@
                         </div>
 
                         <div class="form-group">
-                            {{ Form::label('ministerio', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            {{ Form::label('ministerio_exerce', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
-                                {{ Form::select('ministerio', $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                                {{ Form::select('ministerio_exerce', $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('ministerio_identifica', 'Qual ministério você exerce na igreja?', ['class' => 'control-label col-md-3 col-lg-2']) }}
+                            <div class="col-md-9 col-lg-10">
+                                {{ Form::select('ministerio_identifica', $ministerio, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                             </div>
                         </div>
 
@@ -83,11 +89,12 @@
                                 {{ Form::text('profissao', null, ['class' => 'form-control']) }}
                             </div>
                         </div>
+                      @dump($oportunidade)
 
                         <div class="form-group">
                             {{ Form::label('oportunidade', 'Você gostaria de ter oportunidade nos cultos da UAADVEL?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">
-                            {{ Form::select('oportunidade', $oportunidade, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
+                            {{ Form::select('oportunidade_culto', $oportunidade, null, ['class' => 'form-control', 'id' => 'ministerio']) }}
                             </div>
                         </div>
 
