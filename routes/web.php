@@ -19,11 +19,11 @@ Route::get('/', [\App\Http\Controllers\FormController::class, 'create'])
 
 Route::post('form/store', [\App\Http\Controllers\FormController::class, 'store'])
     ->name('form.store');
+Route::get('form/index', [\App\Http\Controllers\FormController::class, 'index'])
+    ->name('form.index');
 Route::patch('instrutor/{id_instrutor}/update', [\App\Http\Controllers\InstrutorController::class, 'update'])
     ->name('instrutor.update');
 Route::delete('instrutor/{id_instrutor}', [\App\Http\Controllers\InstrutorController::class, 'destroy'])
     ->name('instrutor.destroy');
-Route::get('instrutor', [\App\Http\Controllers\InstrutorController::class, 'index'])
-    ->name('instrutor.index');
 Route::get('instrutor/{id_instrutor}/edit', [\App\Http\Controllers\InstrutorController::class, 'edit'])
     ->name('instrutor.edit');

@@ -89,8 +89,6 @@
                                 {{ Form::text('profissao', null, ['class' => 'form-control']) }}
                             </div>
                         </div>
-                      @dump($oportunidade)
-
                         <div class="form-group">
                             {{ Form::label('oportunidade', 'Você gostaria de ter oportunidade nos cultos da UAADVEL?', ['class' => 'control-label col-md-3 col-lg-2']) }}
                             <div class="col-md-9 col-lg-10">

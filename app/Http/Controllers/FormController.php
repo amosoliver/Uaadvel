@@ -14,7 +14,9 @@ class FormController extends Controller
         $this->form = $form;
     }
     public function index() {
+        $v['form'] = $this->form->all();
 
+        return response()->view('index', $v);
     }
     public function create()
     {
